@@ -3,21 +3,21 @@
 "use strict";
 
 function pow(x, n) {
-	return x * n;
+  return x ** n;
 }
 
 function add2(n1, n2) {
-	return n1 + n2;
+  return n1 + n2;
 }
 
 function add(...args) {
-	let count = arguments.length;
-	let sum = 0;
-	for (let i=0; i<count; i++) {
-		sum += arguments[i];		
-	}
-	
-	return sum;
+  let count = arguments.length;
+  let sum = 0;
+  for (let i = 0; i < count; i++) {
+    sum += arguments[i];
+  }
+
+  return sum;
 }
 
 /*
@@ -30,6 +30,18 @@ function add(...args) {
 	0 - 59   NC
 */
 function computeGrade(grades) {
-	return "???";
-}
+  let averageGrades = grades.reduce((a, b) => a + b) / grades.length;
 
+  if (averageGrades >= 90 && averageGrades <= 100) {
+    return "A";
+  } else if (averageGrades >= 80 && averageGrades <= 89) {
+    return "B";
+  } else if (averageGrades <= 79 && averageGrades >= 70) {
+    return "C";
+  } else if (averageGrades <= 69 && averageGrades >= 60) {
+    return "D";
+  } else {
+    return "NC";
+  }
+}
+console.log(computeGrade([87, 45, 67, 100]));
