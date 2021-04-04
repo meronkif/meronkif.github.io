@@ -6,8 +6,6 @@ function sum(number) {
   }
 }
 
-console.log(sum(10));
-
 //
 let linkedList = {
   add: function (num) {
@@ -23,5 +21,3 @@ let linkedList = {
     } else return { value: num + 1, next: this.add(num - 1) };
   },
 };
-
-console.log(linkedList.remove(2));
