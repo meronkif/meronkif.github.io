@@ -63,3 +63,17 @@ averageGrade2.push(student7.averageGrades2());
 averageGrade2.push(student8.averageGrades2());
 console.log(students2);
 console.log(averageGrade2);
+
+//3.
+Array.prototype.sort = function () {
+  for (let i = 0; i < this.length; i++) {
+    for (let j = i; j < this.length; j++) {
+      if (this[i] > this[j]) {
+        let temp = this[i];
+        this[i] = this[j];
+        this[j] = temp;
+      }
+    }
+  }
+  return this;
+};
