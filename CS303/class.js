@@ -5,6 +5,7 @@
 //since there is no function return, and a free variable, there is no closure.
 //In the construction function clock, only the variable timer and the funciton render belong to it.
 // Every object made of the Clock construction function will have access to start and stop methods, so they are public
+//The presence of the constructor function proves that classes are functions.
 
 //2.
 class Student {
